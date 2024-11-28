@@ -88,7 +88,7 @@ const GasGraph = ({ graphData, date }) => {
         beginAtZero: true,
         
         ticks: {
-          stepSize: 3, // Set the step size to 2, so ticks will be 0, 2, 4, 6, 8, etc.
+          stepSize: 2, // Set the step size to 2, so ticks will be 0, 2, 4, 6, 8, etc.
         },
       },
     },
