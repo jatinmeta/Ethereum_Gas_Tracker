@@ -1,0 +1,59 @@
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 70px; 
+}
+
+.card {
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 250px; /* Adjust width as needed */
+}
+
+.card p {
+  margin: 5px 0;
+}
+
+.card .low_1 {
+  color: rgb(2, 240, 2);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.card .avg_1 {
+  color: rgb(3, 87, 136);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.card .high_1 {
+  font-size: 24px;
+  color: red;
+  margin-bottom: 10px;
+}
+
+
+.card .low {
+  font-size: larger;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Add margin to separate indicator from other content */
+}
+
+.card .avg {
+  font-size: larger;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Add margin to separate indicator from other content */
+}
+
+.card .high {
+  font-size: larger;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Add margin to separate indicator from other content */
+}

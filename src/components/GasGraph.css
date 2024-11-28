@@ -1,0 +1,78 @@
+/* Container for the graph */
+.gas-graph-container {
+  position: relative;
+  /* width: 100%; */
+  height: 370px; /* Or whatever height fits your layout */
+  width: 600px;
+  background-color: #ffffff; /* Subtle background color */
+  border-radius: 10px;
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+  padding: 20px 20px 10px; 
+  margin: 20px 0;
+}
+
+/* Title for the graph */
+.gas-graph-title {
+  font-size: 1.5rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Tooltip customization */
+.chartjs-tooltip {
+  background-color: #222;
+  color: #fff;
+  border-radius: 5px;
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+/* Legend styling */
+.chartjs-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between items */
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.chartjs-legend li {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 8px; /* Rounded corners for each legend item */
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.chartjs-legend li:hover {
+  background-color: rgba(0, 0, 0, 0.1); /* Light hover effect */
+  transform: scale(1.05); /* Slight zoom effect */
+}
+
+.chartjs-legend li span {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px; /* Spacing between color box and label */
+  border-radius: 50%; /* Circular shape */
+}
+
+/* Canvas specific styles */
+canvas {
+  border-radius: 10px;
+}
+
+/* Additional legend item styles */
+.chartjs-legend li:first-child {
+  color: green; /* Low Gas label */
+}
+
+.chartjs-legend li:nth-child(2) {
+  color: blue; /* Avg Gas label */
+}
+
+.chartjs-legend li:nth-child(3) {
+  color: red; /* High Gas label */
+}

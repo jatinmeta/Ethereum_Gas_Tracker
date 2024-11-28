@@ -1,0 +1,82 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: flex-start; /* Align items at the top of the container */
+    min-height: 100vh;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .gas-table-container {
+    width: 80%; /* Adjust width as needed */
+    max-width: 1200px; /* Optional max width for the table */
+    margin-top: 20px;
+    position: relative; /* Ensure the pagination can be positioned within this container */
+  }
+  
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1rem;
+    margin: 5px 0;
+  }
+  
+
+  .pagination {
+    position: relative;
+    bottom: -10px; /* Position at the bottom of the container */
+    right: -390px;  /* Position at the right of the container */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  
+  .pagination select, .pagination button {
+    margin: 0 5px;
+    padding: 7px 10px;  /* Adjust padding for better button appearance */
+    font-size: 0.8rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;  /* Optional rounded corners */
+  }
+  
+  /* "Prev" and "Next" button styles */
+  .pagination button {
+    background-color: #1E90FF;  /* Dodger Blue */
+    color: #ffffff;  /* White text */
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Hover effect */
+  .pagination button:hover {
+    background-color: #005bb5;  /* Darker blue for hover */
+  }
+  
+  .pagination select {
+    background-color: #f0f0f0;  /* Light gray background for the select box */
+    color: #767676;  /* Dark text for readability */
+    border-radius: 5px;  /* Optional rounded corners */
+    border: 1px solid #ccc;  /* Border color for the select box */
+  }
+  
+  /* Hover effect for select */
+  .pagination select:hover {
+    border-color: #999;  /* Darker border on hover */
+  }
+  
+/* 
+  body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url('../public/aab');
+    background-size: cover; 
+    background-position: center;
+  } */
+
+  
