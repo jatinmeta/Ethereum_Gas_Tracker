@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import GasCards from "./components/GasCards";
 import GasGraph_last1hour from "./components/GasGraph_last1hour";
-import GasGraph_last24hour from "../../gas_2/GasGraph_last24hour";
 import GasTable from "./components/GasTable";
 
 import "./App.css";
