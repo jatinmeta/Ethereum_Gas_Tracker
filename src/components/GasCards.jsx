@@ -1,19 +1,29 @@
 import React from "react";
 import "./GasCards.css";
+
 const GasCards = ({ gasData }) => (
   <div className="card-container">
     {Object.entries(gasData).map(([key, data]) => (
-      <div className="card">
-      {key.toUpperCase() == "LOW" ? <p className="low">😁 LOW</p> : null}
-      {key.toUpperCase() == "AVG" ? <p className="avg">😃 AVG</p> : null}
-      {key.toUpperCase() == "HIGH" ?<p className="high"> 🙂 HIGH</p> : null}
+      <div key={key} className={`card ${key.toLowerCase()}-card`}>
+        <div className="card-header">
+          {key.toUpperCase() === "LOW" && <p className="status low">😁 LOW</p>}
+          {key.toUpperCase() === "AVG" && <p className="status avg">😃 AVG</p>}
+          {key.toUpperCase() === "HIGH" && <p className="status high"> 🙂 HIGH</p>}
+        </div>
+        
+        <div className="card-price">
+          {key.toUpperCase() === "LOW" && <h3 className="price low">{data.price.toFixed(3)} gwei</h3>}
+          {key.toUpperCase() === "AVG" && <h3 className="price avg">{data.price.toFixed(3)} gwei</h3>}
+          {key.toUpperCase() === "HIGH" && <h3 className="price high">{data.price.toFixed(3)} gwei</h3>}
+        </div>
 
-        {/* <p>{key.toUpperCase()}</p> */}
-        {key.toUpperCase() == "LOW" ? <h3 className="low_1">{data.price.toFixed(3)} gwei</h3> : null}
-        {key.toUpperCase() == "AVG" ? <h3 className="avg_1">{data.price.toFixed(3)} gwei</h3> : null}
-        {key.toUpperCase() == "HIGH" ?<h3 className="high_1">{data.price.toFixed(3)} gwei</h3> : null}  
-        <p>Base : {data.base.toFixed(3)} Gwei | Priority : {data.priority.toFixed(3)} </p>
-        <p> ${data.cost} | {data.time}</p>
+        <div className="card-details">
+          <p className="fee-line">Base: {data.base.toFixed(3)} Gwei | Priority: {data.priority.toFixed(3)} Gwei</p>
+        </div>
+
+        <div className="card-footer">
+          <p className="estimate">${data.cost} | {data.time}</p>
+        </div>
       </div>
     ))}
   </div>
@@ -28,4 +38,3 @@ Estimated Cost
 Time Estimate
 
  */
-

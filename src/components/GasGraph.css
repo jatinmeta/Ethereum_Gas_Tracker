@@ -1,78 +1,118 @@
 /* Container for the graph */
 .gas-graph-container {
   position: relative;
-  /* width: 100%; */
-  height: 370px; /* Or whatever height fits your layout */
-  width: 600px;
-  background-color: #ffffff; /* Subtle background color */
-  border-radius: 10px;
-  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
-  padding: 20px 20px 10px; 
-  margin: 20px 0;
+  width: 100%;
+  max-width: 1000px;
+  height: 500px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #121212;
+  border: 1px solid #333333;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 /* Title for the graph */
 .gas-graph-title {
+  font-family: 'Space Grotesk', sans-serif;
   font-size: 1.5rem;
-  color: #333;
+  color: #FFFFFF;
   text-align: center;
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
-/* Tooltip customization */
-.chartjs-tooltip {
-  background-color: #222;
-  color: #fff;
-  border-radius: 5px;
-  padding: 8px;
-  font-size: 0.9rem;
+/* Chart container */
+.chart-container {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 3rem);
+  padding: 1rem;
+  background-color: #000000;
+  border-radius: 8px;
+  border: 1px solid #2D2D2D;
 }
 
-/* Legend styling */
-.chartjs-legend {
+/* Custom Tooltip */
+.custom-tooltip {
+  background-color: #000000 !important;
+  border: 1px solid #333333 !important;
+  border-radius: 4px !important;
+  padding: 0.75rem !important;
+  color: #FFFFFF !important;
+  font-family: 'JetBrains Mono', monospace !important;
+  font-size: 0.875rem !important;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5) !important;
+}
+
+.custom-tooltip-header {
+  color: #E0E0E0;
+  margin-bottom: 0.5rem;
+  font-size: 0.75rem;
+}
+
+.custom-tooltip-value {
+  font-weight: bold;
+  color: #2196F3;
+}
+
+/* Legend Styling */
+.gas-graph-legend {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
-  gap: 20px; /* Space between items */
-  font-size: 14px;
-  font-weight: bold;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  padding: 0.75rem;
+  background-color: #000000;
+  border: 1px solid #2D2D2D;
+  border-radius: 4px;
 }
 
-.chartjs-legend li {
+.legend-item {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+  font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 0.875rem;
+  color: #FFFFFF;
   cursor: pointer;
-  padding: 5px 10px;
-  border-radius: 8px; /* Rounded corners for each legend item */
-  transition: background-color 0.3s ease, transform 0.3s ease;
+  transition: background-color 0.2s ease;
 }
 
-.chartjs-legend li:hover {
-  background-color: rgba(0, 0, 0, 0.1); /* Light hover effect */
-  transform: scale(1.05); /* Slight zoom effect */
+.legend-item:hover {
+  background-color: #1A1A1A;
 }
 
-.chartjs-legend li span {
-  width: 16px;
-  height: 16px;
-  margin-right: 8px; /* Spacing between color box and label */
-  border-radius: 50%; /* Circular shape */
+.legend-item.active {
+  background-color: #1A1A1A;
+  border: 1px solid #333333;
+}
+
+.legend-color {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .gas-graph-container {
+    height: 400px;
+    margin: 1rem;
+    padding: 1rem;
+  }
+
+  .gas-graph-title {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
 }
 
 /* Canvas specific styles */
 canvas {
-  border-radius: 10px;
-}
-
-/* Additional legend item styles */
-.chartjs-legend li:first-child {
-  color: green; /* Low Gas label */
-}
-
-.chartjs-legend li:nth-child(2) {
-  color: blue; /* Avg Gas label */
-}
-
-.chartjs-legend li:nth-child(3) {
-  color: red; /* High Gas label */
+  border-radius: 8px;
+  background: rgba(0, 0, 0, 0.2);
 }
